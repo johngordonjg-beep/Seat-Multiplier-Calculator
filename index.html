@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Calculate three independent adjusted auto prices using 1.10, 1.08, and 1.06 multipliers." />
+  <title>Multiplier Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="calculator-card" aria-labelledby="app-title">
+      <header>
+        <p class="eyebrow">AUTO PRICE TOOL</p>
+        <h1 id="app-title">Multiplier Calculator</h1>
+        <p class="intro">Enter a separate auto price for each multiplier. Each result calculates independently.</p>
+      </header>
+
+      <form id="calculator-form" novalidate>
+        <div class="calculator-row">
+          <div class="field-content">
+            <label for="price-110">Price for 1.10</label>
+            <span class="formula">Auto price × 1.10</span>
+            <div class="input-wrap">
+              <span aria-hidden="true">$</span>
+              <input id="price-110" name="price110" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0.00" autocomplete="off" data-multiplier="1.10" data-output="result-110" />
+            </div>
+            <p id="error-110" class="error" role="alert" aria-live="polite"></p>
+          </div>
+          <div class="result-box">
+            <span>Result</span>
+            <output id="result-110" for="price-110">$0.00</output>
+          </div>
+        </div>
+
+        <div class="calculator-row">
+          <div class="field-content">
+            <label for="price-108">Price for 1.08</label>
+            <span class="formula">Auto price × 1.08</span>
+            <div class="input-wrap">
+              <span aria-hidden="true">$</span>
+              <input id="price-108" name="price108" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0.00" autocomplete="off" data-multiplier="1.08" data-output="result-108" />
+            </div>
+            <p id="error-108" class="error" role="alert" aria-live="polite"></p>
+          </div>
+          <div class="result-box">
+            <span>Result</span>
+            <output id="result-108" for="price-108">$0.00</output>
+          </div>
+        </div>
+
+        <div class="calculator-row">
+          <div class="field-content">
+            <label for="price-106">Price for 1.06</label>
+            <span class="formula">Auto price × 1.06</span>
+            <div class="input-wrap">
+              <span aria-hidden="true">$</span>
+              <input id="price-106" name="price106" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0.00" autocomplete="off" data-multiplier="1.06" data-output="result-106" />
+            </div>
+            <p id="error-106" class="error" role="alert" aria-live="polite"></p>
+          </div>
+          <div class="result-box">
+            <span>Result</span>
+            <output id="result-106" for="price-106">$0.00</output>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="clear-button" type="button">Clear all</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
